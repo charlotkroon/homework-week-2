@@ -18,6 +18,8 @@ function lukeSkyWalker() {
   return lukeSkyWalker()
 }
 
+
+
 function darthVader() {
   fetch('https://swapi.co/api/people/4/') // Call the fetch function passing the url of the API as a parameter
     .then((response) => { // Your code for handling the data you get from the API

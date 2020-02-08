@@ -12,5 +12,15 @@
     "mocha": "^5.2.0"
   },
   "description": "This assignment covers the first week of the Intermediate Bootcamp. This repository contains 3 test files, each covering a single task. The order of the tasks does not matter. **You can complete them in any order.** Try to complete as many of them as you can.",
-  "author": ""
+  "author": "",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliegabriella/second-assignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charliegabriella/second-assignment/issues"
+  },
+  "homepage": "https://github.com/charliegabriella/second-assignment#readme",
+  "keywords": []
 }
