@@ -1,29 +1,27 @@
-//The exported groupAdultsByAgeRange should be a function.
+//NOTE @ TEACHER:
+//I know that this is the right solution but I don't know how to initilize the accumulator 'result' to empty.
+//Because when Reduce starts it's going to insert 'current' into the 'array-category'. 
+//But sadly, JS doesn't know that it's an array that it's reducing in. I want to help JS, but I can't.
+//I've been working on this for hours but I don't seem to find the solution. Yet I know that I am 
+//super close to it, so it's quite frustrating to hand it in like this. Maybe we can look over it together on Monday.   
+
 function groupAdultsByAgeRange(persons) {
   const ageFilter = persons.filter((person) => person.age >= 18)
+  const people = ageFilter.reduce((result, current) => {
+    if (current.age <= 20) {
+      result['20 and younger'].push(current)
+    } else if (current.age <= 30) {
+      result['21-30'].push(current)
+    } else if (current.age <= 40) {
+      result['31-40'].push(current)
+    } else if (current.age <= 50) {
+      result['41-50'].push(current)
+    } else {
+      result['51 and older'].push(current)
+    }
+  }, {});
+  return people
 }
-
-//The function will be called with an array of objects as its argument. The objects represent people, with a property name and a property age. 
-//2. An empty array results in an empty object --> map, because it transforms an array
-
-//3. Filters out people under the age of 18. Use filter
-
-//4. only contains non empty groups --> 
-
-
-// const overTheAgeOf18e = people.reduce((acc, it) => (acc[it.age] = it, acc), {
-
-// })
-
-//5. Groups an array of people by age --> use 
-
-// 5. You should use a combination of filter and reduce. If your solution uses for-loops instead of reduce for creating the final object, you will receive partial points. The use of for-loops is allowed, but try to construct the returned "grouping" object using reduce.
-// 6. These are the groups that your code needs to return. Use the text as the name of the property:
-// // 20 and younger
-// // 21-30
-// // 31-40
-// // 41-50
-// // 51 and older
 
 //The exported groupAdultsByAgeRange should be a function.
 module.exports.groupAdultsByAgeRange = groupAdultsByAgeRange
